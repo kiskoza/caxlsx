@@ -1,5 +1,6 @@
 # encoding: UTF-8
 module Axlsx
+  using ObjectWithInstanceValues
 
   # The Worksheet class represents a worksheet in the workbook.
   class Worksheet
@@ -626,7 +627,7 @@ module Axlsx
       r = rows[row_index]
 
       if r
-        return r[col_index] 
+        return r[col_index]
       end
     end
 

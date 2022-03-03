@@ -1,5 +1,7 @@
 # encoding: UTF-8
 module Axlsx
+  using ObjectWithInstanceValues
+
   # 3D attributes for a chart.
   class View3D
 
@@ -71,7 +73,7 @@ module Axlsx
     alias :hPercent= :h_percent=
 
       # @see rot_y
-      def rot_y=(v) 
+      def rot_y=(v)
         RangeValidator.validate "View3D.rot_y", 0, 360, v
         @rot_y = v
       end

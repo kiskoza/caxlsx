@@ -1,4 +1,5 @@
 module Axlsx
+  using ObjectWithInstanceValues
 
   # The RichTextRun class creates and self serializing text run.
   class RichTextRun

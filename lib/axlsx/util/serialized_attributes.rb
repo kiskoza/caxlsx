@@ -1,4 +1,6 @@
 module Axlsx
+  using ObjectWithInstanceValues
+
   # This module allows us to define a list of symbols defining which
   # attributes will be serialized for a class.
   module SerializedAttributes
@@ -11,7 +13,7 @@ module Axlsx
     # class methods applied to all includers
     module ClassMethods
 
-      # This is the method to be used in inheriting classes to specify 
+      # This is the method to be used in inheriting classes to specify
       # which of the instance values are serializable
       def serializable_attributes(*symbols)
         @xml_attributes = symbols
@@ -43,7 +45,7 @@ module Axlsx
       end
     end
 
-    # serializes the instance values of the defining object based on the 
+    # serializes the instance values of the defining object based on the
     # list of serializable attributes.
     # @param [String] str The string instance to append this
     # serialization to.
